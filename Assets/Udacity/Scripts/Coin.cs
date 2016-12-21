@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour 
 {
-    //Create a reference to the CoinPoofPrefab
+	private static int coinCount;
 
+	void Start(){
+		print ("Coin count = "+coinCount);
+	}
+
+    //Create a reference to the CoinPoofPrefab
     public void OnCoinClicked(GameObject poof) {
-        poof.transform.position = gameObject.transform.position;
-        // Instantiate the CoinPoof Prefab where this coin is located
-        // Make sure the poof animates vertically
-        // Destroy this coin. Check the Unity documentation on how to use Destroy
+		// Instantiate the CoinPoof Prefab where this coin is located
+		// Make sure the poof animates vertically
+		Object.Instantiate(poof, gameObject.transform.position, Quaternion.Euler(Camera.main.transform.rotation.eulerAngles));
+
+		// Destroy this coin. Check the Unity documentation on how to use Destroy
+		Destroy(gameObject);
+		coinCount++;
+		print ("New Coin count = "+coinCount);
     }
 
 }
