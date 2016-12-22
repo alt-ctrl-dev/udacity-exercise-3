@@ -10,9 +10,13 @@ public class Key : MonoBehaviour
 
     public static bool hasKey;
 
-    void Start()
+    private void Awake()
     {
         hasKey = false;
+    }
+
+    void Start()
+    {
         print("key count = " + hasKey);
     }
 
