@@ -8,7 +8,7 @@ public class Key : MonoBehaviour
     public GameObject keyPoof;
     public Door door;
 
-    private static bool hasKey;
+    public static bool hasKey;
 
     void Start()
     {
@@ -35,11 +35,6 @@ public class Key : MonoBehaviour
             Destroy(gameObject);
             hasKey = true;
             UpdateText();
-        }
-        else
-        {
-            door.Unlock();
-            print("Unlocking door");
         }
     }
 
