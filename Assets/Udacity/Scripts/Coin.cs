@@ -8,6 +8,7 @@ public class Coin : MonoBehaviour
 
 	void Start ()
 	{
+        coinCount = 0;
 		print ("Coin count = " + coinCount);
 	}
 
