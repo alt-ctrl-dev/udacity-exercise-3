@@ -22,8 +22,9 @@ public class Key : MonoBehaviour
 
     void Update()
 	{
-		//Bonus: Key Animation
-	}
+        //Bonus: Key Animation
+        transform.Rotate(Vector3.up * Time.deltaTime * 60f * 3f);
+    }
 
     public void OnKeyClicked()
     {
