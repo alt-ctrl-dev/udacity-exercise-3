@@ -6,7 +6,12 @@ public class Coin : MonoBehaviour
 {
 	private static int coinCount;
 
-	void Start ()
+    public void Awake()
+    {
+        coinCount = 0;
+    }
+
+    void Start ()
 	{
 		print ("Coin count = " + coinCount);
 	}
